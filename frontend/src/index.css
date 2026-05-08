@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary: #1b5e20;
+  --primary-light: #4c8c4a;
+  --secondary: #2e7d32;
+  --accent: #ffc107;
+  --text-dark: #212121;
+  --text-light: #757575;
+  --bg-light: #f8f9fa;
+  --white: #ffffff;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--white);
+  color: var(--text-dark);
+}
+
+/* Glassmorphism Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.float-img {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Navbar Enhancement */
+.navbar {
+  background: var(--white) !important;
+  padding: 15px 60px !important;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 26px !important;
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+  letter-spacing: -0.5px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a, .nav-links button {
+  color: var(--text-dark) !important;
+  font-weight: 500 !important;
+  font-size: 15px !important;
+  text-decoration: none;
+  transition: 0.3s;
+  border: none;
+  background: none;
+}
+
+.nav-links a:hover {
+  color: var(--primary) !important;
+}
+
+.cart-btn {
+  background: var(--primary) !important;
+  color: var(--white) !important;
+  padding: 8px 20px !important;
+  border-radius: 50px !important;
+  font-weight: 600 !important;
+  transition: 0.3s !important;
+}
+
+.cart-btn:hover {
+  background: var(--primary-light) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(27, 94, 32, 0.2);
+}
+
+.logout-btn {
+  color: #d32f2f !important;
+  font-weight: 600 !important;
+}
+
+/* Hero Section */
+.hero-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f1f8e9 0%, #ffffff 100%);
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.shop-btn {
+  background: var(--primary);
+  color: var(--white);
+  padding: 15px 40px;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 18px;
+  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(27, 94, 32, 0.3);
+}
+
+.shop-btn:hover {
+  background: var(--primary-light);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(27, 94, 32, 0.4);
+}
+
+/* Product Cards */
+.product-card {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid #f0f0f0;
+}
+
+.product-card:hover {
+  transform: translateY(-12px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--primary-light);
+}
+
+.product-img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.1);
+}
+
+.product-btn {
+  background: var(--primary);
+  color: var(--white);
+  padding: 12px 35px;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.product-btn:hover {
+  background: var(--primary-light);
+  letter-spacing: 1px;
+}
+
+/* Authority Section */
+.authority-section {
+  background: #fdfdfd;
+  padding: 80px 0;
+}
+
+.authority-card {
+  background: var(--white);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  transition: 0.3s;
+  text-align: center;
+}
+
+.authority-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.authority-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #e8f5e9;
+  margin-bottom: 20px;
+}
+
+/* Category Page Enhancement */
+.category-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.back-btn {
+  background: var(--white) !important;
+  color: var(--text-dark) !important;
+  border: 1px solid #ddd !important;
+  padding: 10px 20px !important;
+  border-radius: 8px !important;
+  font-weight: 500 !important;
+  transition: 0.3s !important;
+}
+
+.back-btn:hover {
+  background: #f5f5f5 !important;
+  transform: translateX(-5px);
+}
+
+/* Auth Pages Enhancement */
+.auth-container {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #e8f5e9 0%, #ffffff 100%);
+  padding: 20px;
+}
+
+.auth-card {
+  background: var(--white);
+  padding: 50px;
+  border-radius: 30px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.auth-card h2 {
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 35px;
+  font-size: 28px;
+}
+
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.auth-card input {
+  padding: 15px 20px;
+  border-radius: 12px;
+  border: 1.5px solid #eee;
+  background: #f9f9f9;
+  font-size: 15px;
+  transition: 0.3s;
+  outline: none;
+}
+
+.auth-card input:focus {
+  border-color: var(--primary);
+  background: var(--white);
+  box-shadow: 0 0 0 4px rgba(27, 94, 32, 0.1);
+}
+
+.auth-card button {
+  padding: 15px;
+  border-radius: 12px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.auth-card button:hover {
+  background: var(--primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(27, 94, 32, 0.3);
+}
+
+.auth-card p {
+  margin-top: 25px;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.auth-card a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-card a:hover {
+  text-decoration: underline;
+}
